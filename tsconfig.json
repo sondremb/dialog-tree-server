@@ -11,12 +11,12 @@
     "paths": {
       "*": ["node_modules/*"]
     },
-    "include": ["src/**/*"],
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "importsNotUsedAsValues": "error"
-  }
+  },
+  "include": ["src/**/*"]
 }

@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import { clickResponse } from './api_old';
 
 const app = express();
 app.use(cors({ origin: 'http://localhost:8080' }));
@@ -10,8 +11,8 @@ app.get('/', (req, res) => {
   res.send('Hello world!');
 });
 
-app.get('/api', (req, res) => {
-  res.send("Testing testing, I'm just suggesting");
+app.get('/api/:id', (req, res) => {
+  res.send(clickResponse(parseInt(req.params.id)));
 });
 
 // start the Express server
